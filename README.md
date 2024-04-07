@@ -2,8 +2,11 @@ Capstone Project
 
     Student Name:
 Harsh Chanchlani 	- 202301152 
+
 Maulik Khoyani	 	- 202301062
+
 Om Patel 			- 202301163
+
 Sneh Shah 			- 202301134
 
     Project ID  - P12.
@@ -20,3 +23,15 @@ Header file - CodeSnippetManager.h - Has all the feature functions declared alon
 Backend file- CodeSnippetManager.cpp - As per the header file each snippet function is defined using a unordered map
 
 Frontend/main file- main.cpp - Here we organize each of our features and based on user input the functions declared and defined in the backend are called upon and provide + cater the user needs for the program through the different features.
+
+
+Contribution:-
+
+*All of us contributed equally
+
+*OM & HARSH - Implementation and Code Writing
+
+*MAULIK & SNEH - IDEATION , THEORY AND DOCUMENTATION
+
+
+
