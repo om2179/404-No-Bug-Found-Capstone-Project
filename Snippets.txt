@@ -1,0 +1,1098 @@
+Tag: doubleLLdeletion
+Code: 
+void deletion(int pos,Node*&head){
+    if(pos == 1){
+        Node*temp=head;
+        temp->next->prev=NULL;
+        head = temp->next;
+        temp->next=NULL;
+        delete temp;
+    }else{
+        Node*curr = head;
+        Node*temp = NULL;
+        int cnt=1;
+        while(cnt <pos){
+            temp = curr;
+            curr = curr -> next;
+            cnt++;
+        }
+        curr ->prev = NULL;
+        temp->next = curr ->next;
+        curr->next->prev = temp;
+        curr->next = NULL;
+        delete curr;
+    } 
+
+Tag: trycatch
+Code: 
+try {
+    /* code */
+} catch (/* exception type */& e) {
+    /* exception handling code */
+}
+
+Tag: switch
+Code: 
+switch (/* expression */) {
+case /* value */:
+    /* code */
+    break;
+default:
+    /* code */
+    break;
+}
+
+Tag: randomstring
+Code: 
+string rand_string(int n,char lw,char up){
+	string s(n,'?');
+	rep(i,n)s[i]=rand_int(lw,up);
+	return s;
+}
+
+Tag: case
+Code: 
+case /* value */:
+    /* code */
+    break;
+
+Tag: if
+Code: 
+if (/* condition */) {
+    /* code */
+}
+
+Tag: #warning
+Code: 
+#warning /* warning message */
+
+Tag: pairsortsecond
+Code: 
+bool sortbysec(const pair<ll,ll> a,
+               const pair<ll,ll> b)
+{
+    if (a.second!=b.second){
+        return a.second<b.second;
+    }
+    else{
+        return a.first<b.first;
+
+Tag: circularqueue
+Code: 
+class cirque
+{
+    int *arr;
+    int front;
+    int rear;
+    int size;
+
+Tag: medianofarray
+Code: 
+int median(vector<int> &A) {
+	sort(A.begin(), A.end());
+	int N = A.size();
+
+Tag: converttodecimal
+Code: 
+int convertToDecimal(string s, int k) {
+  int ans = 0;
+  for(char x: s) {
+    ans *= k;
+    ans += x - '0';
+  } return ans;
+}
+
+Tag: oddeven
+Code: 
+  if(n%2==0){
+        cout<<"number is even"<<endl;
+    }
+   else
+   cout<<"number is odd"<<endl;
+
+Tag: arrayinput
+Code: 
+ int n;
+    cin>>n;
+    int arr[n]; 
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+
+Tag: sumofelementsofarray
+Code: 
+ int n,sum=0;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+        sum+=arr[i];
+    }
+    cout<<"The sum of elements of array is "<<sum<<endl;
+
+Tag: destructor
+Code: 
+ClassName::~ClassName() {
+    /* code */
+}
+
+Tag: findkthlargestinarray
+Code: 
+int findKthLargest(vector<int>& A, int k) {
+    nth_element(begin(A), begin(A) + k - 1, end(A), greater<int>());
+    return A[k - 1];
+}
+
+Tag: arrayreversal
+Code: 
+void reverseArray(int arr[], int n) {
+    int start = 0;
+    int end = n - 1;
+    while (start < end) {
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+        start++;
+        end--;
+    }
+}
+
+Tag: charactercounter
+Code: 
+ char str[100];
+    int upr = 0, lwr = 0, oth = 0;
+    cin.getline(str, 100); 
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (str[i] >= 'A' && str[i] <= 'Z')
+            upr++;
+        else if (str[i] >= 'a' && str[i] <= 'z')
+            lwr++;
+        else if (str[i] == ' ')
+            continue;
+        else
+            oth++;
+    }
+    cout << "Uppercase: " << upr << " Lowercase: " << lwr << " Others: " << oth;
+
+Tag: rotatestring
+Code: 
+// In-place rotates s towards left by d
+void leftrotate(string &s, int d)
+{
+    reverse(s.begin(), s.begin()+d);
+    reverse(s.begin()+d, s.end());
+    reverse(s.begin(), s.end());
+}
+ 
+// In-place rotates s towards right by d
+void rightrotate(string &s, int d)
+{
+   leftrotate(s, s.length()-d);
+}
+
+Tag: stack
+Code: 
+class Stack {
+private:
+    Node* topNode;
+
+Tag: #define
+Code: 
+#define MACRO_NAME value
+
+Tag: ternarysearch
+Code: 
+// Function to perform Ternary Search
+int ternarySearch(int l, int r, int key, int ar[])
+ 
+{
+    while (r >= l) {
+ 
+        // Find the mid1 and mid2
+        int mid1 = l + (r - l) / 3;
+        int mid2 = r - (r - l) / 3;
+ 
+        // Check if key is present at any mid
+        if (ar[mid1] == key) {
+            return mid1;
+        }
+        if (ar[mid2] == key) {
+            return mid2;
+        }
+ 
+        // Since key is not present at mid,
+        // check in which region it is present
+        // then repeat the Search operation
+        // in that region
+ 
+        if (key < ar[mid1]) {
+ 
+            // The key lies in between l and mid1
+            r = mid1 - 1;
+        }
+        else if (key > ar[mid2]) {
+ 
+            // The key lies in between mid2 and r
+            l = mid2 + 1;
+        }
+        else {
+            // The key lies in between mid1 and mid2
+            l = mid1 + 1;
+            r = mid2 - 1;
+        }
+    }
+ 
+    // Key not found
+    return -1;
+}
+
+Tag: dowhile
+Code: 
+do {
+    /* code */
+} while (/* condition */);
+
+Tag: priorityqueue
+Code: 
+struct Node {
+    int priority;
+    int data;
+    struct Node* next;
+};
+
+Tag: modulopower
+Code: 
+ll modpower(ll n,ll a,ll p){ ll res=1; while(a){ if(a%2) res= ((res*n)%p) ,a--; else n=((n*n)%p),a/=2;} return res;}
+
+Tag: bubblesort
+Code: 
+void bubbleSort(int arr[], int n)
+{
+    int i, j;
+    bool swapped;
+    for (i = 0; i < n - 1; i++) {
+        swapped = false;
+        for (j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                swap(arr[j], arr[j + 1]);
+                swapped = true;
+            }
+        }
+ 
+        // If no two elements were swapped
+        // by inner loop, then break
+        if (swapped == false)
+            break;
+    }
+}
+
+Tag: try
+Code: 
+try {
+    /* code */
+} catch (/* exception type */& e) {
+    /* exception handling code */
+}
+
+Tag: linearsearch
+Code: 
+int search(int arr[], int N, int x)
+{
+    for (int i = 0; i < N; i++)
+        if (arr[i] == x)
+            return i;
+    return -1;
+}
+
+Tag: linkedlistnode
+Code: 
+class ListNode {
+  public:
+    int val;
+  ListNode * next;
+  ListNode(int x) {
+    val = x;
+    next = NULL;
+  }
+};
+
+Tag: maxofthree
+Code: 
+void findMaximum(int a, int b, int c) {
+    a > b ? (a > c ? cout << a : cout << c) : (b > c ? cout << b : cout << c);
+}
+int main() {
+    int a, b, c;
+    cin >> a >> b >> c;
+    findMaximum(a, b, c);
+    return 0;
+}
+
+Tag: prefixsum2D
+Code: 
+constexpr int MAX_SIDE = 1000;
+int prefixSum2D[MAX_SIDE + 1][MAX_SIDE + 1];
+int array2D[MAX_SIDE + 1][MAX_SIDE + 1];
+
+Tag: #if
+Code: 
+#if /* expression */
+/* code */
+#endif // expression
+
+Tag: throw
+Code: 
+throw /* exception */;
+
+Tag: stuct
+Code: 
+struct StructName {
+    /* data */
+};
+
+Tag: dequeue
+Code: 
+class deque{
+    int *arr;
+    int size;
+    int front;
+    int rear;
+    deque(int d){
+        size=d;
+        arr = new int [size];
+        front=rear=-1;
+    }
+    bool push_front(int d){
+    if((front == 0 && rear == size-1) || (rear == (front-1)%(size-1))){
+        cout<<"queue is full";
+        return false;
+    }else if (front == -1){
+        front = rear = 0;
+    }else if(front == 0){
+        front = size-1;
+    }else{
+        front--;
+    }
+    arr[front] = d;
+    return true;
+    }
+    bool rear_push(int value){
+        if((front == 0 && rear == size-1) || (rear == (front-1)%(size-1))){
+        cout<<"queue is full";
+        return false;
+       } else if(front == -1){ 
+            front=rear = 0;
+            
+       }else if(rear == size-1 && front != 0){
+            rear = 0;
+            
+       }else{
+        rear++;
+       
+       }
+       arr[rear]=value;
+       return true;
+    }
+    int pop_rear(){
+     if(front == -1){
+            cout<<"queue is empty"<<endl;
+            return -1;
+        }
+        int ans = arr[rear];
+        arr[rear]= -1;
+        if(front == rear){
+            front = rear = -1;
+        }else if(rear ==0)
+            rear = size-1;
+        else{
+           rear--;
+        }
+        return ans;
+    }
+    int pop_front(){
+         if(front == -1){
+            cout<<"queue is empty"<<endl;
+            return -1;
+        }
+        int ans = arr[front];
+        arr[front]= -1;
+        if(front == rear){
+            front = rear = -1;
+        }else if(front == size-1)
+            front = 0;
+        else{
+            front++;
+        }
+        return ans;
+    
+    }
+};
+
+Tag: #pragma
+Code: 
+#pragma /* directive */
+
+Tag: for
+Code: 
+for (int i = 0; i < /* count */; ++i) {
+    /* code */
+}
+
+Tag: linkedlistinsertatposition
+Code: 
+void insertatposition(Node* &head,int position,int d){
+if (position==1){
+insertathead(head,d);
+return;
+}
+Node* temp = head;
+int count =1;
+while(count<position-1){
+temp = temp->link;
+count++;
+}
+
+Tag: #ifdef
+Code: 
+#ifdef MACRO_NAME
+/* code */
+#endif // MACRO_NAME
+
+Tag: mergesort
+Code: 
+void merge(int array[], int const left, int const mid,
+           int const right)
+{
+    int const subArrayOne = mid - left + 1;
+    int const subArrayTwo = right - mid;
+ 
+    // Create temp arrays
+    auto *leftArray = new int[subArrayOne],
+         *rightArray = new int[subArrayTwo];
+ 
+    // Copy data to temp arrays leftArray[] and rightArray[]
+    for (auto i = 0; i < subArrayOne; i++)
+        leftArray[i] = array[left + i];
+    for (auto j = 0; j < subArrayTwo; j++)
+        rightArray[j] = array[mid + 1 + j];
+ 
+    auto indexOfSubArrayOne = 0, indexOfSubArrayTwo = 0;
+    int indexOfMergedArray = left;
+ 
+    // Merge the temp arrays back into array[left..right]
+    while (indexOfSubArrayOne < subArrayOne
+           && indexOfSubArrayTwo < subArrayTwo) {
+        if (leftArray[indexOfSubArrayOne]
+            <= rightArray[indexOfSubArrayTwo]) {
+            array[indexOfMergedArray]
+                = leftArray[indexOfSubArrayOne];
+            indexOfSubArrayOne++;
+        }
+        else {
+            array[indexOfMergedArray]
+                = rightArray[indexOfSubArrayTwo];
+            indexOfSubArrayTwo++;
+        }
+        indexOfMergedArray++;
+    }
+    // Copy the remaining elements of
+    // left[], if there are any
+    while (indexOfSubArrayOne < subArrayOne) {
+        array[indexOfMergedArray]
+            = leftArray[indexOfSubArrayOne];
+        indexOfSubArrayOne++;
+        indexOfMergedArray++;
+    }
+ 
+    // Copy the remaining elements of
+    // right[], if there are any
+    while (indexOfSubArrayTwo < subArrayTwo) {
+        array[indexOfMergedArray]
+            = rightArray[indexOfSubArrayTwo];
+        indexOfSubArrayTwo++;
+        indexOfMergedArray++;
+    }
+    delete[] leftArray;
+    delete[] rightArray;
+}
+ 
+// begin is for left index and end is right index
+// of the sub-array of arr to be sorted
+void mergeSort(int array[], int const begin, int const end)
+{
+    if (begin >= end)
+        return;
+ 
+    int mid = begin + (end - begin) / 2;
+    mergeSort(array, begin, mid);
+    mergeSort(array, mid + 1, end);
+    merge(array, begin, mid, end);
+}
+
+Tag: doubleLLnode
+Code: 
+class Node{
+    public:
+    int data;
+    Node*next;
+    Node*prev;
+    Node(int d){
+        this-> data = d;
+        this->next=NULL;
+        this->prev=NULL;
+    }
+};
+
+Tag: randomint
+Code: 
+ll rand_int(ll k){ //[0,k)
+	return rand_int(0,k-1);
+}
+
+Tag: gcd/hcf
+Code: 
+ll gcd(ll a, ll b){return (b == 0 ? a : gcd(b, a % b));}
+
+Tag: removalofduplicatecharacter
+Code: 
+ char s[100];
+    int flag = 0;
+    cin.getline(s, 100);
+    int length = strlen(s);
+    for (int i = 0; i < length; i++) {
+        for (int j = i + 1; j < length; j++) {
+            if (s[j] == s[i]) {
+                for (int k = j; k < length; k++) {
+                    s[k] = s[k + 1];
+                }
+                flag++;
+                length--;
+                j--;
+            }
+        }
+    }
+    if (flag == 0)
+        cout << "-1";
+    else
+        cout << s;
+
+Tag: selectionsort
+Code: 
+void selectionSort(int arr[], int n) 
+{ 
+    int i, j, min_idx; 
+  
+    // One by one move boundary of 
+    // unsorted subarray 
+    for (i = 0; i < n - 1; i++) { 
+  
+        // Find the minimum element in 
+        // unsorted array 
+        min_idx = i; 
+        for (j = i + 1; j < n; j++) { 
+            if (arr[j] < arr[min_idx]) 
+                min_idx = j; 
+        } 
+  
+        // Swap the found minimum element 
+        // with the first element 
+        if (min_idx != i) 
+            swap(arr[min_idx], arr[i]); 
+    } 
+}
+
+Tag: sumofdigitsofnumber
+Code: 
+ int num, sum = 0, temp;
+    cin>>sum;
+    while (num != 0)
+    {
+        temp = num%10;
+        sum = sum+temp;
+        num = num/10;
+    }
+    cout << "Sum: " << sum << endl;
+
+Tag: #ifndef
+Code: 
+#ifndef HEADER_NAME_H
+#define HEADER_NAME_H
+
+Tag: InteractiveProblem
+Code: 
+ll ask(ll l, ll r) {
+    cout << "? " << l << ' ' << r << endl;
+    fflush(stdout);
+    ll ans;
+    cin >> ans;
+    return ans;
+}
+
+Tag: commpetitiveprogramming
+Code: 
+void solve() {
+    
+}
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+Tag: doubleLLinsertatpos
+Code: 
+void insertatpos(int pos,Node*&head,Node*&tail,int d){
+    if(pos ==1){
+        insertathead(head,d);
+        return;
+    }
+    Node*temp=head;
+    int cnt =1;
+    while(cnt<pos-1){
+        temp = temp->next;
+        cnt++;
+    }
+    if(temp->next == NULL){
+        insertattail(tail,d);
+        return;
+    }
+    Node*nodetoinsert = new Node(d);
+    nodetoinsert->next=temp->next;
+    temp -> next -> prev =nodetoinsert;
+    temp -> next = nodetoinsert;
+    nodetoinsert->prev = temp;
+}
+
+Tag: vector
+Code: 
+vector<//datatype> vectorname;
+
+Tag: vectorfindelement
+Code: 
+auto it = find (V.begin(), V.end(), num);
+// it - V.begin() will given index of given num [0-indexed]
+V[it - V.begin()] = otherNum;
+
+Tag: reversenum
+Code: 
+int rev2(int x) {
+    int b = 0;
+    while (a > 0) {
+        b = b * 10 + (a % 10);
+        a /= 10;
+    }
+    return b;
+}
+
+Tag: circularLLdeletion
+Code: 
+void deletion(Node *& tail , int value){
+    if(tail == NULL){
+        cout<<"empty"<<endl;
+        return;
+    }else{
+        Node*perv = tail;
+        Node*curr = perv->next;
+        while(curr ->data != value){
+            perv=curr;
+            curr=curr->next;
+        }
+        perv->next=curr->next;
+        if(curr == perv){
+            tail = NULL;
+        }
+        if(tail == curr){
+            tail = perv;
+        }
+        curr->next=NULL;
+        delete curr;
+    }
+}
+
+Tag: circularLLnode
+Code: 
+class Node{
+    public :
+    int data;
+    Node *next;
+   
+    Node(int d){   
+    this -> data = d;
+    this->next = NULL;
+   
+   }
+
+Tag: queue
+Code: 
+class Queue {
+private:
+    Node* frontNode;
+    Node* rearNode;
+
+Tag: constructor
+Code: 
+ClassName::ClassName(/* args */) {
+    /* code */
+}
+
+Tag: insertionsort
+Code: 
+void insertionSort(int arr[], int n)
+{
+    int i, key, j;
+    for (i = 1; i < n; i++) {
+        key = arr[i];
+        j = i - 1;
+ 
+        // Move elements of arr[0..i-1],
+        // that are greater than key, 
+        // to one position ahead of their
+        // current position
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j = j - 1;
+        }
+        arr[j + 1] = key;
+    }
+}
+
+Tag: #elif
+Code: 
+#if /* condition */
+/* code */
+#elif /* additional condition */
+/* alternative code */
+#endif // condition
+
+Tag: primefind
+Code: 
+ll fastprime(ll a){ if (a != 2 && a % 2 == 0 || a < 2) return 0;  for(ll i = 3; i * i <= a; i += 2) if(a % i == 0) return 0; return 1;}
+
+Tag: linkedlistlength
+Code: 
+int getLength(ListNode* head) {
+    int length = 0;
+    for(; head; head = head->next, length++);
+    return length;
+}
+
+Tag: sortstring
+Code: 
+/ function to print string in sorted order
+void sortString(string &str)
+{
+    // Hash array to keep count of characters.
+    // Initially count of all characters is 
+    // initialized to zero.
+    int charCount[MAX_CHAR] = {0};
+     
+    // Traverse string and increment 
+    // count of characters
+    for (int i=0; i<str.length(); i++)
+ 
+        // 'a'-'a' will be 0, 'b'-'a' will be 1,
+        // so for location of character in count 
+        // array we will do str[i]-'a'.
+        charCount[str[i]-'a']++;    
+     
+    // Traverse the hash array and print 
+    // characters
+    for (int i=0;i<MAX_CHAR;i++)
+        for (int j=0;j<charCount[i];j++)
+            cout << (char)('a'+i);
+}
+
+Tag: power
+Code: 
+ll power(ll n,ll a){ ll res=1; while(a){ if(a%2) res*=n,a--; else   n*=n,a/=2;} return res;}
+
+Tag: class
+Code: 
+class ClassName {
+public:
+    ClassName(/* args */);
+    ~ClassName();
+private:
+};
+
+Tag: doubleLLinsertattail
+Code: 
+void insertattail(Node*&tail,int d){
+    
+    Node*temp=new Node(d);
+    tail->next=temp;
+    temp ->prev = tail;
+    tail=temp;
+}
+
+Tag: doubleLLinsertathead
+Code: 
+void insertathead(Node*&head,int d){
+    Node*temp = new Node(d);
+    temp->next=head;
+    head->prev=temp;
+    
+    head=temp;
+}
+
+Tag: quicksort
+Code: 
+int partition(int* arr, int start, int end)
+{   
+      // assuming last element as pivotElement
+    int index = 0, pivotElement = arr[end], pivotIndex;
+    int* temp = new int[end - start + 1]; // making an array whose size is equal to current partition range...
+    for (int i = start; i <= end; i++) // pushing all the elements in temp which are smaller than pivotElement
+    {
+        if(arr[i] < pivotElement)
+        {
+            temp[index] = arr[i];
+            index++;
+        }
+    }
+ 
+    temp[index] = pivotElement; // pushing pivotElement in temp
+    index++;
+ 
+    for (int i = start; i < end; i++) // pushing all the elements in temp which are greater than pivotElement
+    {
+        if(arr[i] > pivotElement)
+        {
+            temp[index] = arr[i];
+            index++;
+        }
+    }
+  // all the elements now in temp array are order : 
+  // leftmost elements are lesser than pivotElement and rightmost elements are greater than pivotElement
+     
+    index = 0;
+    for (int i = start; i <= end; i++) // copying all the elements to original array i.e arr
+    {   
+        if(arr[i] == pivotElement)
+        {
+              // for getting pivot index in the original array.
+              // we need the pivotIndex value in the original and not in the temp array
+            pivotIndex = i;
+        }
+        arr[i] = temp[index];
+        index++;
+    }
+    return pivotIndex; // returning pivotIndex
+}
+ 
+void quickSort(int* arr, int start, int end)
+{  
+    if(start < end)
+    {   
+        int partitionIndex = partition(arr, start, end); // for getting partition
+        quickSort(arr, start, partitionIndex - 1); // sorting left side array
+        quickSort(arr, partitionIndex + 1, end); // sorting right side array
+    }
+    return;
+}
+
+Tag: #else
+Code: 
+#if /* condition */
+/* code */
+#else
+/* alternative code */
+#endif // condition
+
+Tag: binarysearch
+Code: 
+// A recursive binary search function. It returns
+// location of x in given array arr[l..r] is present,
+// otherwise -1
+int binarySearch(int arr[], int l, int r, int x)
+{
+    if (r >= l) {
+        int mid = l + (r - l) / 2;
+ 
+        // If the element is present at the middle
+        // itself
+        if (arr[mid] == x)
+            return mid;
+ 
+        // If element is smaller than mid, then
+        // it can only be present in left subarray
+        if (arr[mid] > x)
+            return binarySearch(arr, l, mid - 1, x);
+ 
+        // Else the element can only be present
+        // in right subarray
+        return binarySearch(arr, mid + 1, r, x);
+    }
+ 
+    // We reach here when element is not
+    // present in array
+    return -1;
+}
+
+Tag: circularLLinsertion
+Code: 
+void insertnode(Node*&tail,int element,int d){
+    if(tail == NULL){
+        Node *temp = new Node(d);
+        tail = temp;
+        temp -> next = temp;
+    }else{
+        Node* curr = tail ; 
+        while(curr->data != element){
+            curr = curr->next;
+        }
+        Node  *temp = new Node(d);
+        temp -> next = curr->next;
+        curr->next = temp;
+    }
+}
+
+Tag: linkedlistinsertathead
+Code: 
+void insertathead(Node* &head,int d){
+//creating a new node
+Node* temp = new Node(d);
+temp ->link = head;
+head = temp;
+}
+
+Tag: namespace
+Code: 
+namespace NamespaceName {
+    /* code */
+}
+
+Tag: eulertotientfunction
+Code: 
+#define int long long
+#define maxn 1500001
+int phi[maxn];
+int s_phi[maxn];
+void pre()
+{
+    int i,j;
+    for(i=1;i<maxn;i++)
+        phi[i] = i;
+    s_phi[1] = 1;
+    for(i=2;i<maxn;i++)
+    {
+        if(phi[i] == i)
+        {
+            for(j=i;j<maxn;j=j+i)
+                phi[j] = (phi[j]/i)*(i-1);
+        }
+        s_phi[i] = s_phi[i-1] + phi[i];    
+    }
+}
+int func(int n)
+{
+ if(n < maxn)
+       return s_phi[n]; 
+    int g;
+    int x = sqrt(n);
+    int sum = 0;
+    for(g=2;g<=x;g++)
+    {
+        sum = sum + func(n/g);
+    }
+    x = n/(x+1);
+    for(g=1;g<=x;g++)
+        sum = sum + s_phi[g]*(n/g - n/(g+1));
+    sum = n*(n+1)/2 - sum;
+    return sum;    
+}
+
+Tag: linkedlistinsertattail
+Code: 
+void insertattail(Node* &tail,int d){
+Node *temp = new Node(d);
+tail->link = temp;
+tail = temp;
+}
+
+Tag: catch
+Code: 
+catch (/* exception type */& e) {
+    /* exception handling code */
+}
+
+Tag: kadanealgo
+Code: 
+int maxSumSubarray (vector<int> A) {
+	int n = A.size();
+	int local_max = 0;
+	int global_max = -1e9;
+    for(int i = 0; i < n; i++) {
+        local_max = max(A[i], A[i] + local_max);
+
+Tag: bogosort
+Code: 
+// To check if array is sorted or not
+bool isSorted(int a[], int n)
+{
+    while (--n > 0)
+        if (a[n] < a[n - 1])
+            return false;
+    return true;
+}
+ 
+// To generate permutation of the array
+void shuffle(int a[], int n)
+{
+    for (int i = 0; i < n; i++)
+        swap(a[i], a[rand() % n]);
+}
+ 
+// Sorts array a[0..n-1] using Bogo sort
+void bogosort(int a[], int n)
+{
+    // if array is not sorted then shuffle
+    // the array again
+    while (!isSorted(a, n))
+        shuffle(a, n);
+}
+
+Tag: typedef
+Code: 
+typedef /* type / / alias */;
+
+Tag: reverselinklist
+Code: 
+ListNode* reverseList(ListNode* head) {
+    ListNode *prev = new ListNode();
+    
+    
+    while(head) {
+        auto node = head;
+        head = head->next;
+        node->next = prev->next;
+        prev->next = node;
+    }
+    
+    return prev->next;
+}
+
+Tag: linkedlistdeletion
+Code: 
+void deletenode(int position,Node* &head){
+// to delete first node
+if (position==1){
+Node* temp = head;
+head = head ->link;
+// memory free for first node
+temp->link = NULL;
+delete temp;
+}
+else {
+Node* prev =NULL;
+Node* curr = head;
+int c = 1;
+while(c<position){
+prev = curr;
+curr = curr ->link;
+c++;
+}
+prev ->link = curr ->link;
+curr->link =NULL;
+delete curr;
+}
+}
+
